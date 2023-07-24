@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Best Calculator</title>
+</head>
+<body>
+    <h1>World's Smartest Calculator</h1>
+    <input type="number" placeholder="Enter your num here" id="inputTex" style="padding-left: 50px;"><br><br>
+    <button onclick="add()">Sum</button>
+    <button onclick="sub()">Sub</button>
+    <button onclick="mul()">Mul </button>
+    <button onclick="div()">Div </button>
+    <button onclick="displayans()">=</button>
+    <button onclick="location. reload()">AC</button><br><br>
+    <p>Equation:</p>
+    <p id="displaynum">0</p>
+    <p>Total: </p>
+    <p id="displayans">0</p>
+
+    <script>
+       reslt = 0;
+       str = ""; 
+
+       function add(){
+
+        a = document.getElementById("inputTex").value;
+        va = parseInt(a);
+        str += a+"+"; 
+        reslt+=va
+        document.getElementById("displaynum").innerHTML=str;
+        document.getElementById("displayans").innerHTML=reslt;
+        document.getElementById("inputTex").value=""
+
+       }
+
+       function sub(){
+
+        a = document.getElementById("inputTex").value;
+        va = parseInt(a);
+        if(str == 0) reslt +=2*va
+        str += a+"-"; 
+        reslt-=va
+        document.getElementById("displaynum").innerHTML=str;
+        document.getElementById("displayans").innerHTML=reslt
+
+       }
+
+       function mul(){
+
+        if(str.length == 0) reslt = 1
+        a = document.getElementById("inputTex").value;
+        va = parseInt(a);
+        str += a+"*"; 
+        reslt*=va
+        document.getElementById("displaynum").innerHTML=str;
+        document.getElementById("displayans").innerHTML=reslt
+
+       }
+
+       function div(){
+
+        if(str.length == 0) reslt = 1
+        a = document.getElementById("inputTex").value;
+        va = parseInt(a);
+        str += a+"/"; 
+        reslt/=va
+        document.getElementById("displaynum").innerHTML=str;
+        document.getElementById("displayans").innerHTML=reslt
+
+       }
+
+       function displayans(){
+
+        a = document.getElementById("inputTex").value;
+        va = parseInt(a);
+        op = str.charAt(str.length-1)
+        if(op === "+"){
+            reslt += va
+        }
+        if(op === "-"){
+            reslt -= va
+        }
+        if(op === "*"){
+            reslt *= va
+        }
+        if(op === "/"){
+            reslt /= va
+        }
+
+        str=str+""+a
+        document.getElementById("displaynum").innerHTML=str;
+        document.getElementById("displayans").innerHTML=reslt
+        document.getElementById("inputTex").value=""
+
+       }
+
+    </script>
+</body>
+</html>
