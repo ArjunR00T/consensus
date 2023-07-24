@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pigface</title>
+    <style>
+.face{
+    margin-top: 100px;
+    position: relative;
+    height: 350px;
+    width:350px;
+    border-radius: 300px;
+    /* background-color: yellow; */
+    /* background-image: radial-gradient(rgba(255, 208, 0, 0.925) 5% , rgba(255, 230, 0, 0.801) 15% , rgb(243, 212, 75) 60%); */
+    background-color: rgb(241, 157, 171);
+    border: 2px solid rgb(0, 0, 0);
+    overflow: hidden;
+}
+.eyes22{
+    margin-top: 75px;
+    margin-left: 55px ;
+    margin-right: 0px;
+    position: fixed;
+    height: 85px;
+    width: 85px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 75px;
+}
+
+.eye2{
+    /* display: inline-block; */
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+    background-color: rgb(12, 12, 14);
+    height: 45px;
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 65px;
+    margin-right: 15px;
+}
+.eyes11{
+    margin-top: 75px;
+    margin-left: 215px ;
+    margin-right: 0px;
+    position: fixed;
+    height: 85px;
+    width: 85px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 75px;
+}
+
+.eye1{
+    /* display: inline-block; */
+    position: absolute;
+    background-color: rgb(12, 12, 14);
+    height: 45px;
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 65px;
+    margin-right: 10px;
+   
+}
+.nose{
+    position: absolute;
+    background-color: rgb(236, 18, 18);
+    height: 90px;
+    width: 150px;
+    border-radius: 60px;
+    margin-top: 200px;
+    margin-left: 100px;
+    border: 1px solid black;
+
+}
+.otta1{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    background-color: black;
+    margin-top: 220px;
+    margin-left: 120px;
+}
+.otta2{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+    background-color: black;
+    margin-top: 220px;
+    margin-left: 185px;
+}
+.ear1{
+    position: fixed;
+    height: 120px;
+    width: 90px;
+    background-color: rgb(243, 162, 176);
+    border-radius: 50px 50px 0 0 ;
+    margin-left: 20px;
+    z-index: -1;
+    border: 1px solid black;
+}
+.ear2{
+    position: fixed;
+    height: 120px;
+    width: 90px;
+    background-color: rgb(238, 160, 173);
+    border-radius: 50px 50px 0 0 ;
+    margin-left: 240px;
+    z-index: -1;
+    border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+    <center>
+    <div class="face">
+        <div class="ear1"></div>
+        <div class="ear2"></div>
+        <div class="eyes11">
+            <div class="eye1"></div>
+        </div>
+        <div class="eyes22">
+            <div class="eye2"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="otta1"></div>
+        <div class="otta2"></div>
+    </div>
+    
+    
+</center>
+</body>
+</html>
