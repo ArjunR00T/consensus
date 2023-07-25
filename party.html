@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Changing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>Lets PAARTYY</div>
+    <script>
+        function changeColor() {
+            const w = [
+  "Let's celebrate! 🎉",
+  "Party hard! 🥳",
+  "Rock the night! 🎸",
+  "Get groovy! 💃",
+  "Let's boogie! 🕺",
+  "Rock and roll! 🤘",
+  "Dance it out! 💃",
+  "Time to jam! 🎶",
+  "Let's get wild! 🕺🔥",
+  "Party like rockstars! 🎸🤩"
+];
+
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            t = w[Math.floor(Math.random()*10)]
+            document.body.style.backgroundColor = color;
+            document.getElementsByTagName("div")[0].textContent=t
+
+        }
+
+        
+
+        setInterval(changeColor, 200);
+    </script>
+</body>
+</html>
