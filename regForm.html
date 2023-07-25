@@ -1,0 +1,99 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+    body{
+           
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHwEeUe0sXzTCLhf-v_6EjtZT3ZN0V1gFI3A&usqp=CAU);
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    align-items: center;
+  opacity: 1;
+    width: 100%;
+    padding: 10px;
+}
+form{
+   margin:auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+    background:linear-gradient(120deg,rgb(155, 144, 144),rgb(255, 255, 255));
+}
+input,select,option{
+border-radius: 15px;
+border: none;
+height: 20px;
+text-align: center;
+}
+label{
+font-size: 18px;
+font-weight: bold;
+font-family:serif;
+color: rgb(24, 4, 4);
+}
+input[type='submit']{
+    /* text-align: center; */
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 35%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    opacity: 0.8;
+   height: 30px;
+}
+    </style>
+    
+</head>
+<body >
+    <div class="container">
+    <form action="https://formspree.io/f/xeqboljo" method="post">
+        <div class="fname">
+            <h1 style="font-size: 35px;color: rgb(126, 1, 1);">Registration:</h1>
+            <hr>
+            <br>
+            <br>
+        <label for="First name">First name:</label>
+        <br><input type="text" name="First name" >
+        </div>
+        <br>
+        <div class="Last name">
+            <label for="last name">Last name:</label>
+            <br><input type="text" name="last name" id="">
+            </div>
+            <br>
+            <div class="email">
+                <label for="email">Email :</label><br>
+                <input type="email" name="email" id="">
+                </div>
+                <br>
+                <div class="password">
+                    <label for="password">Password:</label>
+                    <br><input type="password" name="password" id="">
+                    </div>
+                        <br>
+                        <div class="dob">
+                            <label for="dob">DOB :</label>
+                            <input type="date" name="dob" id="dob">
+                        </div>
+                        <br>
+                        <div class="gender">
+                            <label for="gender">Gender : </label>
+                            <select name="gender" id="">
+                                <option value="none">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        </div>
+                        <br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+</body></html>
