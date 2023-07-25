@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(37, 83, 209);
+        }
+        .main{
+            text-align: center;
+            color: white;
+            width: 50%;
+        }
+        input{
+            padding: 5px;
+            border: None;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button{
+            border-radius: 5px;
+            border: None;
+            padding: 5px;
+            margin: 10px;
+            color: white;
+            background-color: rgb(5, 29, 95);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Guess a number between 0-100</h1>
+        <input type="Number" placeholder="Enter your Guess">
+        <button type="button" onclick="start()">Submit</button>
+        <h4 id="p">Prompt: Click submit to get started</h4>
+        <h4 id="l">Lives Remaining: 5</h4>
+    </div>
+
+    <script>
+        guess = Math.floor(Math.random()*100);
+        console.log(guess)
+        c = 5
+
+        function start() {
+            if(c > 1){
+                i = document.getElementsByTagName("input")[0].value;
+                if(i > guess){
+                    c--
+                    document.getElementById("p").textContent="Guess low"
+                    document.getElementById("l").textContent="Lives Remaining: "+c
+                }else if(i < guess){
+                    c--;
+                    document.getElementById("p").textContent="Guess High"
+                    document.getElementById("l").textContent="Lives Remaining: "+c
+
+                }
+                else if(i==guess){
+                    alert("Congrats you won!")
+                    document.getElementById("p").textContent="Your Correct"
+                    location.reload()
+                }
+            }else{
+                alert("You Loose...Correct ans: "+guess)
+                location.reload()
+            }
+        }
+    </script>
+</body>
+</html>
